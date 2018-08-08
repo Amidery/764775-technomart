@@ -1,7 +1,7 @@
 # Личный проект «Техномарт»
 
 * Студент: [Evgeniya Ziganshina](https://up.htmlacademy.ru/htmlcss/22/user/764775).
-* Наставник: `Неизвестно`.
+* Наставник: [Елена Забара](https://htmlacademy.ru/profile/lena___elena).
 
 ---
 
