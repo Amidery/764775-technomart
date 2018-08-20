@@ -11,7 +11,6 @@
         <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
           <label class="visually-hidden" for="search">Поиск</label>
           <input id="search" type="search" name="search" placeholder="Поиск:">
-          <button type="submit">Найти</button>
         </form>
         <a class="bookmarks" href="#">
           <span>Закладки:</span>
@@ -51,36 +50,30 @@
       </nav>
     </header>
     <main class="container">
-      <h2>Перфораторы</h2>
       <ul class="breadcrumbs">
         <li><a href="index.html">Главная</a></li>
         <li><a href="#">Каталог</a></li>
         <li><a href="#">Инструмент</a></li>
         <li class="breadcrumbs-current">Перфораторы</li>
       </ul>
+      <h2>Перфораторы</h2>
       <section class="filters">
         <h3 class="visually-hidden">Фильтр товаров</h3>
-        <ul>
-          <li class="filter-title">Фильтр:</li>
-          <li class="filter-title">Сортировка:</li>
-          <li><a href="#">По цене</a></li>
-          <li><a href="#">По типу</a></li>
-          <li><a href="#">По функционалу</a></li>
-          <li><a href="#">По возрастанию</a></li>
-          <li><a href="#">По убыванию</a></li>
-        </ul>
+        <p class="filter-title">Фильтр:</p>
         <form class="filter" action="https://echo.htmlacademy.ru" method="get">
           <fieldset>
            <legend>Цена:</legend>
            <div class="range-controls">
             <span class="scale"></span>
-            <button class="filter-button-min"></button>
-            <button class="filter-button-max"></button>
+            <button class="filter-button-min">Минимальная цена</button>
+            <button class="filter-button-max">Максимальная цена</button>
            </div>
            <div class="price-controls">
-            <input class="min-price" type="text" name="min-price" placeholder="0">
+            <label class="visually-hidden" for="min-price">Минимальная цена</label>
+            <input class="min-price" id="min-price" type="text" name="min-price" placeholder="0">
             <span>—</span>
-            <input class="max-price" type="text" name="max-price" placeholder="30000">
+            <label class="visually-hidden" for="max-price">Максимальная цена</label>
+            <input class="max-price" id="max-price" type="text" name="max-price" placeholder="30000">
            </div>          
           </fieldset>
           <fieldset>
@@ -121,11 +114,19 @@
               </li>
             </ul>
           </fieldset>
-          <button type="submit" class="filter-button button">Показать</button>
+          <button class="filter-button button" type="submit">Показать</button>
         </form>
       </section>
       <section class="catalog">
         <h3 class="visually-hidden">Товары:</h3>
+        <ul>
+          <li class="filter-title">Сортировка:</li>
+          <li><a href="#">По цене</a></li>
+          <li><a href="#">По типу</a></li>
+          <li><a href="#">По функционалу</a></li>
+          <li><a href="#">По возрастанию</a></li>
+          <li><a href="#">По убыванию</a></li>
+        </ul>
         <ul class="items-list">
           <li class="catalog-item">
             <img src="img/snippet-bosch3000.jpg" width="127" height="112" alt="Перфоратор BOSCH BFG 3000">
@@ -290,7 +291,7 @@
       <p>Товар добавлен в корзину!</p>
       <a class="button" href="#">Оформить заказ</a>
       <a class="button" href="#">Продолжить покупки</a>
-      <button class="modal-close">x</button>
+      <button class="modal-close">Закрыть</button>
     </section>
   </body>
 </html>
