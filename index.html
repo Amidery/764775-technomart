@@ -8,7 +8,11 @@
     <header class="main-header">
       <div class="header-upper">
         <a class="header-logo logo">Техномарт</a>
-        <!--тут форма поиска-->
+        <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
+          <label class="visually-hidden" for="search">Поиск</label>
+          <input id="search" type="search" name="search" placeholder="Поиск:">
+          <button type="submit">Найти</button>
+        </form>
         <a class="bookmarks" href="#">
           <span>Закладки:</span>
           <span>0</span>
@@ -69,8 +73,8 @@
                 <a class="button" href="catalog.html">Открыть каталог</a>
               </div>
               <div class="slider-buttons">
-                <button class="slider-buttons-previous"></button>
-                <button class="slider-buttons-next"></button>
+                <button class="slider-buttons-previous" type="button"></button>
+                <button class="slider-buttons-next" type="button"></button>
               </div>
             </section>
           </li>
@@ -265,11 +269,22 @@
     </footer>
     <section class="modal-write-us">
       <h2 class="visually hidden">Написать нам</h2>
-      <p>Ваше имя:</p>
-      <p>Ваш e-mail:</p>
-      <p>Текст письма:</p>
-      <!-- Здесь будет форма -->
-      <button class="modal-close">x</button>
+      <form class="write-us-form" action="https://echo.htmlacademy.ru" method="post">
+        <p>
+          <label for="name">Ваше имя:</label>
+          <input id="name" type="text" name="name" placeholder="Имя Фамилия">
+        </p>
+        <p>
+            <label for="email">Ваш e-mail:</label>
+            <input id="email" type="email" name="email" placeholder="email@example.com">
+        </p>
+        <p>
+            <label for="letter">Текст письма:</label>
+            <textarea id="letter" name="letter" placeholder="В свободной форме"></textarea>
+        </p>
+        <button class="button write-us-button" type="submit">Отправить</button>
+      </form>
+      <button class="modal-close" type="button">Закрыть</button>
     </section>
   </body>
 </html>
