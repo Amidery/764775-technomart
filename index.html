@@ -3,6 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>Техномарт</title>
+    <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700|PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header class="main-header">
@@ -10,7 +13,7 @@
         <a class="header-logo logo">Техномарт</a>
         <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
           <label class="visually-hidden" for="search">Поиск</label>
-          <input id="search" type="search" name="search" placeholder="Поиск:">
+          <input class="search-input" id="search" type="search" name="search" placeholder="Поиск:">
         </form>
         <a class="bookmarks" href="#">
           <span>Закладки:</span>
@@ -25,8 +28,8 @@
       <div class="header-middle">
         <h1>Интернет-магазин строительных материалов и инструментов для ремонта</h1>
         <p> 
-          <span>+7 (812) 555-05-55</span>
-          <span>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</span>
+          <span class="phone">+7 (812) 555-05-55</span>
+          <span class="address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</span>
         </p>
         <ul class="user-navigation">
           <li class="login"><a href="#">Вход</a></li>
@@ -47,7 +50,7 @@
     </header>
     <main class="container">
       <section class="categories">
-        <h2 class="visually hidden">Категории</h2>
+        <h2 class="visually-hidden">Категории</h2>
         <ul class="categories-list-left">
           <li>
             <h3>Материалы</h3>
@@ -106,8 +109,8 @@
               <span>BFG 9000</span>
             </h3>
             <p>
-              <span>32500 Р.</span>
-              <a class="button button-item" href="#">25500 Р.</a>
+              <span class="old-price">32500 Р.</span>
+              <a class="new-price" href="#">25500 Р.</a>
             </p>
           </li>
           <li class="catalog-item">
@@ -117,8 +120,8 @@
               <span>BFG 3000</span>
             </h3>
             <p>
-              <span>22500 Р.</span>
-              <a class="button button-item" href="#">15500 Р.</a>
+              <span class="old-price">22500 Р.</span>
+              <a class="new-price" href="#">15500 Р.</a>
             </p>
           </li>
           <li class="catalog-item">
@@ -128,8 +131,8 @@
               <span>BFG 6000</span>
             </h3>
             <p>
-              <span>30500 Р.</span>
-              <a class="button button-item" href="#">25500 Р.</a>
+              <span class="old-price">30500 Р.</span>
+              <a class="new-price" href="#">25500 Р.</a>
             </p>
           </li>
           <li class="catalog-item new">
@@ -140,7 +143,7 @@
             </h3>
             <p>
               <span></span>
-              <a class="button button-item" href="#">12500 Р.</a>
+              <a class="new-price" href="#">12500 Р.</a>
             </p>
           </li>
         </ul>
@@ -197,31 +200,33 @@
           </li>
         </ul>
       </section>
-      <section class="about">
-        <h2>Компания &#171;Техномарт&#187;</h2>
-        <p>
-          Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и строительства не оставит равнодушными любителей сэкономить на гастарбайтерах.
-        </p>
-        <p>
-          <span>Мы можем доставить ваш товар в самые отдаленные точки России!</span>
-          <span>Техномарт работает со многими транспортными компаниями:</span>
-        </p>
-        <ul class="transport">
-          <li>Деловые линии</li>
-          <li>Автотрейдинг</li>
-          <li>ЖелДорЭкспедиция</li>
-        </ul>
-        <a class="button" href="#">Подробнее о компании</a>
-      </section>
-      <section class="contacts">
-        <h2>Контакты</h2>
-        <p>
-          <span>Вы можете забрать товар сами,</span>
-          <span>заехав в наш офис:</span>
-        </p>
-        <a href=""><img src="img/map-small.png" width="300" height="158" alt="Карта офиса по адресу улица Б. Конюшенная, 19/8"></a>
-        <a class="button" href="#">Заблудились? Напишите нам!</a>
-      </section>
+      <div class="about-contacts">
+        <section class="about">
+          <h2>Компания &#171;Техномарт&#187;</h2>
+          <p>
+            Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и строительства не оставит равнодушными любителей сэкономить на гастарбайтерах.
+          </p>
+          <p>
+            <span>Мы можем доставить ваш товар в самые отдаленные точки России!</span>
+            <span>Техномарт работает со многими транспортными компаниями:</span>
+          </p>
+          <ul class="transport">
+            <li>Деловые линии</li>
+            <li>Автотрейдинг</li>
+            <li>ЖелДорЭкспедиция</li>
+          </ul>
+          <a class="button" href="#">Подробнее о компании</a>
+        </section>
+        <section class="contacts">
+          <h2>Контакты</h2>
+          <p>
+            <span>Вы можете забрать товар сами,</span>
+            <span>заехав в наш офис:</span>
+          </p>
+          <a href=""><img src="img/map-small.png" width="300" height="158" alt="Карта офиса по адресу улица Б. Конюшенная, 19/8"></a>
+          <a class="button" href="#">Заблудились? Напишите нам!</a>
+        </section>
+      </div>
     </main>
     <footer class="main-footer">
       <div class="footer-upper">
@@ -267,7 +272,7 @@
       </div>
     </footer>
     <section class="modal-write-us">
-      <h2 class="visually hidden">Написать нам</h2>
+      <h2 class="visually-hidden">Написать нам</h2>
       <form class="write-us-form" action="https://echo.htmlacademy.ru" method="post">
         <p>
           <label for="name">Ваше имя:</label>
@@ -281,7 +286,9 @@
             <label for="letter">Текст письма:</label>
             <textarea id="letter" name="letter" placeholder="В свободной форме"></textarea>
         </p>
-        <button class="button write-us-button" type="submit">Отправить</button>
+        <div class="button-background">
+          <button class="button write-us-button" type="submit">Отправить</button>
+        </div>
       </form>
       <button class="modal-close" type="button"><span class="visually-hidden">Закрыть</span></button>
     </section>

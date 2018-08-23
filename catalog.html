@@ -3,11 +3,14 @@
   <head>
     <meta charset="utf-8">
     <title>Техномарт</title>
+    <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700|PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header class="main-header">
       <div class="header-upper">
-        <a class="header-logo logo" href="index.html">Техномарт</a>
+        <a class="header-logo logo catalog-logo" href="index.html">Техномарт</a>
         <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
           <label class="visually-hidden" for="search">Поиск</label>
           <input id="search" type="search" name="search" placeholder="Поиск:">
@@ -16,7 +19,7 @@
           <span>Закладки:</span>
           <span>0</span>
         </a>
-        <a class="basket" href="#">
+        <a class="basket basket-full" href="#">
           <span>Корзина:</span>
           <span>10</span>
         </a>
@@ -25,13 +28,13 @@
       <div class="header-middle">
         <h1>Интернет-магазин строительных материалов и инструментов для ремонта</h1>
         <p>
-          <span>+7 (812) 555-05-55</span>
-          <span>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</span>
+          <span class="phone">+7 (812) 555-05-55</span>
+          <span class="address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</span>
         </p>
         <div class="profile">
           <a class="name" href="#">Равшан Джамшутович</a>
           <a class="out" href="#">Выход</a>
-          <ul class="user-navigation">
+          <ul class="inner-user-navigation">
             <li class="orders"><a href="#">Мои заказы</a></li>
             <li class="profile"><a href="#">Личный кабинет</a></li>
           </ul>
@@ -56,7 +59,7 @@
         <li><a href="#">Инструмент</a></li>
         <li class="breadcrumbs-current">Перфораторы</li>
       </ul>
-      <h2>Перфораторы</h2>
+      <h2 class="page-title">Перфораторы</h2>
       <section class="filters">
         <h3 class="filter-title">Фильтр:</h3>
         <form class="filter" action="https://echo.htmlacademy.ru" method="get">
@@ -77,48 +80,48 @@
           </fieldset>
           <fieldset>
             <legend>Производители:</legend>
-            <ul>
+            <ul class="filter-factories-list">
               <li>
-                <input class="visually-hidden" id="filter-bosch" type="checkbox" name="bosch" checked>
+                <input id="filter-bosch" type="checkbox" name="bosch" checked>
                 <label for="filter-bosch">Bosch</label>
               </li>
               <li>
-                <input class="visually-hidden" id="filter-interscol" type="checkbox" name="interscol">
+                <input id="filter-interscol" type="checkbox" name="interscol">
                 <label for="filter-interscol">Интерскол</label>
               </li>
               <li>
-                <input class="visually-hidden" id="filter-makita" type="checkbox" name="makita" checked>
+                <input id="filter-makita" type="checkbox" name="makita" checked>
                 <label for="filter-makita">Makita</label>
               </li>
               <li>
-                <input class="visually-hidden" id="filter-dewalt" type="checkbox" name="dewalt">
+                <input id="filter-dewalt" type="checkbox" name="dewalt">
                 <label for="filter-dewalt">Dewalt</label>
               </li>
               <li>
-                <input class="visually-hidden" id="filter-hitachi" type="checkbox" name="hitachi">
+                <input id="filter-hitachi" type="checkbox" name="hitachi">
                 <label for="filter-hitachi">Hitachi</label>
               </li>
             </ul>
           </fieldset>
           <fieldset>
             <legend>Питание:</legend>
-            <ul>
+            <ul class="filter-battery-list">
               <li>
-                <input class="visually-hidden" id="filter-battery" type="radio" name="power-group" value="battery" checked>
+                <input id="filter-battery" type="radio" name="power-group" value="battery" checked>
                 <label for="filter-battery">Аккумуляторные</label>
               </li>
               <li>
-                <input class="visually-hidden" id="filter-mains" type="radio" name="power-group" value="mains">
+                <input id="filter-mains" type="radio" name="power-group" value="mains">
                 <label for="filter-mains">Сетевые</label>
               </li>
             </ul>
           </fieldset>
-          <button class="filter-button button" type="submit">Показать</button>
+          <button class="filter-button" type="submit">Показать</button>
         </form>
       </section>
       <section class="catalog">
         <h3 class="visually-hidden">Товары:</h3>
-        <ul>
+        <ul class="filter-sort">
           <li class="filter-title">Сортировка:</li>
           <li><a href="#">По цене</a></li>
           <li><a href="#">По типу</a></li>
@@ -134,8 +137,8 @@
               <span>BFG 3000</span>
             </h4>
             <p>
-              <span>22500 Р.</span>
-              <a class="button button-item" href="#">15500 Р.</a>
+              <span class="old-price">22500 Р.</span>
+              <a class="new-price" href="#">15500 Р.</a>
             </p>
           </li>
           <li class="catalog-item">
@@ -145,8 +148,8 @@
               <span>BFG 6000</span>
             </h4>
             <p>
-              <span>30500 Р.</span>
-              <a class="button button-item" href="#">25500 Р.</a>
+              <span class="old-price">30500 Р.</span>
+              <a class="new-price" href="#">25500 Р.</a>
             </p>
           </li>
           <li class="catalog-item new">
@@ -157,7 +160,7 @@
             </h4>
             <p>
               <span></span>
-              <a class="button button-item" href="#">12500 Р.</a>
+              <a class="new-price" href="#">12500 Р.</a>
             </p>
           </li>
           <li class="catalog-item">
@@ -167,8 +170,8 @@
               <span>BFG 3000</span>
             </h4>
             <p>
-              <span>22500 Р.</span>
-              <a class="button button-item" href="#">15500 Р.</a>
+              <span class="old-price">22500 Р.</span>
+              <a class="new-price" href="#">15500 Р.</a>
             </p>
           </li>
           <li class="catalog-item new">
@@ -178,8 +181,8 @@
               <span>BFG 6000</span>
             </h4>
             <p>
-              <span>30500 Р.</span>
-              <a class="button button-item" href="#">25500 Р.</a>
+              <span class="old-price">30500 Р.</span>
+              <a class="new-price" href="#">25500 Р.</a>
             </p>
           </li>
           <li class="catalog-item">
@@ -190,7 +193,7 @@
             </h4>
             <p>
               <span></span>
-              <a class="button button-item" href="#">12500 Р.</a>
+              <a class="new-price" href="#">12500 Р.</a>
             </p>
           </li>
           <li class="catalog-item new">
@@ -200,8 +203,8 @@
               <span>BFG 3000</span>
             </h4>
             <p>
-              <span>22500 Р.</span>
-              <a class="button button-item" href="#">15500 Р.</a>
+              <span class="old-price">22500 Р.</span>
+              <a class="new-price" href="#">15500 Р.</a>
             </p>
           </li>
           <li class="catalog-item">
@@ -211,8 +214,8 @@
               <span>BFG 6000</span>
             </h4>
             <p>
-              <span>30500 Р.</span>
-              <a class="button button-item" href="#">25500 Р.</a>
+              <span class="old-price">30500 Р.</span>
+              <a class="new-price" href="#">25500 Р.</a>
             </p>
           </li>
           <li class="catalog-item">
@@ -223,12 +226,12 @@
             </h4>
             <p>
               <span></span>
-              <a class="button button-item" href="#">12500 Р.</a>
+              <a class="new-price" href="#">12500 Р.</a>
             </p>
           </li>
         </ul>
         <ul class="pagination-list">
-          <li class="pagination-item pagination-item-current"><a>1</a></li>
+          <li class="pagination-item pagination-item-current">1</li>
           <li class="pagination-item"><a href="#">2</a></li>
           <li class="pagination-item"><a href="#">3</a></li>
           <li class="pagination-item"><a href="#">Следующая</a></li>
@@ -244,7 +247,7 @@
     </main>
     <footer class="main-footer">
       <div class="footer-upper">
-        <a class="footer-logo logo" href="index.html">Техномарт</a>
+        <a class="footer-logo logo catalog-logo" href="index.html">Техномарт</a>
         <ul class="footer-menu">
           <li><a href="#">Компания</a></li>
           <li><a href="#">Новости</a></li>
@@ -288,8 +291,10 @@
     <section class="cart">
       <h2 class="visually-hidden">Корзина</h2>
       <p>Товар добавлен в корзину!</p>
-      <a class="button" href="#">Оформить заказ</a>
-      <a class="button" href="#">Продолжить покупки</a>
+      <div class="button-background">
+        <a class="button" href="#">Оформить заказ</a>
+        <a class="button-shopping" href="#">Продолжить покупки</a>
+      </div>
       <button class="modal-close"><span class="visually-hidden">Закрыть</span></button>
     </section>
   </body>
