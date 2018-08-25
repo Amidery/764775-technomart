@@ -45,11 +45,11 @@ a {
   background-color: #ee3643;
 }
 
-.catalog-logo:hover,
-.catalog-logo:focus {
+.catalog-logo:hover {
   background-color: #ca2c37; /** лого внутренней страницы **/
 }
 
+.catalog-logo:focus,
 .catalog-logo:active {
   background-color: #ba2732; /** лого внутренней страницы **/
 }
@@ -59,22 +59,23 @@ a {
   border: none;
 }
 
-.search-form input:hover,
-.search-form input:focus {
+.search-form input:hover {
   background-color: #212a3a;
 }
 
+.search-form input:focus,
 .search-form input:active {
   font-family: "Cuprum", Arial, sans-serif;
   font-size: 17px;
   line-height: 18px;
   font-weight: 400;
+
   color: #000000;
 
   background-color: #ffffff;
 }
 
-.search-input input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+.search-input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
   font-family: "Cuprum", Arial, sans-serif;
   font-size: 17px;
   line-height: 18px;
@@ -83,7 +84,7 @@ a {
   opacity: 1; /* Firefox */
 }
 
-.search-input input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+.search-input:-ms-input-placeholder { /* Internet Explorer 10-11 */
   font-family: "Cuprum", Arial, sans-serif;
   font-size: 17px;
   line-height: 18px;
@@ -91,7 +92,7 @@ a {
   color: #ffffff;
 }
 
-.search-input input::-ms-input-placeholder { /* Microsoft Edge */
+.search-input::-ms-input-placeholder { /* Microsoft Edge */
   font-family: "Cuprum", Arial, sans-serif;
   font-size: 17px;
   line-height: 18px;
@@ -110,13 +111,14 @@ a {
 }
 
 .bookmarks:hover,
-.bookmarks:focus,
-.basket:hover,
-.basket:focus {
+.basket:hover {
   background-color: #212a3a;
 }
 
+
+.bookmarks:focus,
 .bookmarks:active,
+.basket:focus,
 .basket:active {
   color: rgba(255, 255, 255, 0.6);
   background-color: #161d29;
@@ -130,11 +132,11 @@ a {
   background-color: #63a63e;
 }
 
-.order:hover,
-.order:focus {
+.order:hover {
   background-color: #5fbb2d;
 }
 
+.order:focus,
 .order:active {
   color: rgba(255, 255, 255, 0.5);
   background-color: #518534;
@@ -145,6 +147,7 @@ a {
   font-size: 16px;
   line-height: 23px;
   font-style: italic;
+  font-weight: 400;
   color: #ee3643; 
 }
 
@@ -193,11 +196,11 @@ a {
   background-color: #ffffff;
 }
 
-.user-navigation a:hover,
-.user-navigation a:focus {
+.user-navigation a:hover {
   color: #ee3643; 
 }
 
+.user-navigation a:focus,
 .user-navigation a:active {
   color: rgba(0, 0, 0, 0.3);
 }
@@ -211,13 +214,13 @@ a {
   text-decoration: underline;
 }
 
-.inner-user-navigation a:hover, /** Равшан Джамшутович**/
-.inner-user-navigation a:focus {
+.inner-user-navigation a:hover { /** Равшан Джамшутович**/ 
   color: #ee3643;
 }
 
 .profile .name:active,
 .profile .out:active,
+.inner-user-navigation a:focus,
 .inner-user-navigation a:active { /** Равшан Джамшутович**/
   color: rgba(50, 66, 92, 0.3);
 }
@@ -226,11 +229,11 @@ a {
   color: #ffffff;
 }
 
-.site-navigation a:hover,
-.site-navigation a:focus {
+.site-navigation a:hover {
   background-color: #293449;
 }
 
+.site-navigation a:focus,
 .site-navigation a:active {
   color: rgba(255, 255, 255, 0.5);
   background-color: #1d2739;
@@ -242,23 +245,23 @@ a {
   list-style: none;
 }
 
-.categories-list-left li:first-child {
+.categories-materials {
   background-color: #ffbf47;
 }
 
-.categories-list-left li:nth-child(2) {
+.categories-instrument {
   background-color: #3bbce3;
 }
 
-.categories-list-right li:first-child {
+.categories-equipment {
   background-color: #dc91d8;
 }
 
-.categories-list-right li:nth-child(2) {
+.categories-sale {
   background-color: #8ed78f;
 }
 
-.categories-list-right li:last-child {
+.categories-delivery {
   background-color: #ffc047;
 }
 
@@ -281,11 +284,11 @@ a {
   background-color: rgba(0, 0, 0, 0.1);
 }
 
-.categories-button:hover,
-.categories-button:focus {
+.categories-button:hover {
   background-color: rgba(0, 0, 0, 0.2);
 }
 
+.categories-button:focus,
 .categories-button:active {
   background-color: rgba(0, 0, 0, 0.3);
 }
@@ -325,11 +328,11 @@ a {
   border: none;
 }
 
-.button:hover,
-.button:focus {
+.button:hover {
   background-color: #ca2c37;
 }
 
+.button:focus,
 .button:active {
   background-color: #ba2732;
 }
@@ -386,16 +389,16 @@ a {
   background-color: #ee3643;
 }
 
-.popular-factories-list li{
+.popular-factories-list a {
   border: 1px solid #e5e5e5;
 }
 
-.popular-factories-list li:hover,
-.popular-factories-list li:focus {
+.popular-factories-list a:hover {
   box-shadow: 0px 10px 25px 0px rgba(41, 52, 73, 0.5);
 }
 
-.popular-factories-list li:active {
+.popular-factories-list a:focus,
+.popular-factories-list a:active {
   opacity: 0.3;
 }
 
@@ -435,11 +438,11 @@ a {
   background-color: #32425c;
 }
 
-.features li:hover,
-.features li:focus {
+.features li:hover {
   background-color: #293449;
 }
 
+.features li:focus,
 .features li:active {
   color: #32425c;
   background-color: #ffffff;
@@ -478,7 +481,7 @@ a {
 
 .about p,
 .contacts p {
-  font-family: "Cuprum", Arial, sans-serif;
+  font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
   line-height: 24px;
   font-weight: 400;
@@ -555,10 +558,21 @@ a {
   border: none;
 }
 
+.filter-factories-list label,
+.filter-battery-list label {
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 15px;
+  line-height: 20px;
+  font-weight: 400;
+  color: #000000;
+  text-transform: uppercase;
+}
+
 .range-controls {
   background-color: #f7f3ec;
 }
 
+.price-controls,
 .price-controls input {
   background-color: #f7f3ec;
   border: none;  
@@ -602,12 +616,13 @@ a {
   border-bottom: 1px #ee3643 dashed;
 }
 
-.filter-sort a:hover,
-.filter-sort a:focus {
+.filter-sort a:hover {
   color: #000000;
   border-bottom: 1px #ee3643 solid;
 }
 
+.sort-item-current,
+.filter-sort a:focus,
 .filter-sort a:active {
   color: #ee3643;
   border-bottom: none;
@@ -630,11 +645,11 @@ a {
   background: #ffffff;
 }
 
-.pagination-item a:hover,
-.pagination-item a:focus {
+.pagination-item a:hover {
   border: 1px solid #bdc6ca;
 }
 
+.pagination-item a:focus,
 .pagination-item a:active {
   border: 1px solid #ee3643;
 }
@@ -691,11 +706,11 @@ a {
   color: #f1f5f7; 
 }
 
-.footer-menu a:hover,
-.footer-menu a:focus {
+.footer-menu a:hover {
   text-decoration: underline;
 }
 
+.footer-menu a:focus,
 .footer-menu a:active {
   color: rgba(241, 245, 247, 0.5);
   text-decoration: none;
@@ -717,11 +732,11 @@ a {
   color: #ffd180;
 }
 
-.footer-categories a:hover,
-.footer-categories a:focus {
+.footer-categories a:hover {
   text-decoration: underline;
 }
 
+.footer-categories a:focus,
 .footer-categories a:active {
   color: rgba(255, 209, 128, 0.5);
   text-decoration: none;
@@ -764,13 +779,13 @@ a {
  }
 
 .footer-mail a:hover,
-.footer-mail a:focus,
-.footer-developers a:hover, 
-.footer-developers a:focus {
+.footer-developers a:hover {
   text-decoration: underline;
 }
 
+.footer-mail a:focus,
 .footer-mail a:active,
+.footer-developers a:focus,
 .footer-developers a:active {
   color: #ee3643;
   text-decoration: none;
