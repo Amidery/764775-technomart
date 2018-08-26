@@ -55,6 +55,7 @@ a {
 }
 
 .search-form input {
+  line-height: 18px;
   background-color: #293449;
   border: none;
 }
