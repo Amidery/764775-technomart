@@ -1,4 +1,13 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after { 
+  box-sizing: inherit; 
+}
+
 body {
+  min-width: 960px;
   margin: 0;
   padding: 0;
 
@@ -502,6 +511,7 @@ a {
 
 .breadcrumbs {
   list-style: none;
+  padding: 0;
 }
 
 .breadcrumbs,
@@ -546,7 +556,7 @@ a {
   list-style: none;
 }
 
-.filter legend {
+.filter-form legend {
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 17px;
   line-height: 30px;
@@ -555,7 +565,7 @@ a {
   text-transform: uppercase;
 }
 
-.filter fieldset {
+.filter-form fieldset {
   border: none;
 }
 
@@ -862,4 +872,325 @@ a {
   text-transform: uppercase; 
 
   background-color: #ffffff;
+}
+
+/** сетки **/
+
+.container {
+  width: 960px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.second-slider,
+.features-guaranty,
+.features-credit,
+.modal-write-us,
+.cart {
+  display: none;
+}
+
+/** сетки хэдер**/
+
+.main-header {
+  height: 320px;
+  padding-bottom: 60px;
+}
+
+.header-upper .container {
+  display: flex;
+  height: 42px;
+}
+
+.header-upper {
+  margin-bottom: 46px;
+}
+
+.header-logo {
+  width: 220px;
+}
+
+.search-form {
+  width: 270px;
+}
+
+.bookmarks,
+.basket,
+.order {
+  width: 150px;
+}
+
+.header-middle {
+  display: flex;
+  margin-bottom: 44px;
+  margin-left: 52px;
+}
+
+.header-middle h1 {
+  width: 197px;
+  margin-top: 0;
+  margin-right: 71px;
+  margin-bottom: 0;
+}
+
+.header-middle p,
+.user-navigation {
+  margin-top: 0;
+  margin-bottom: 0;  
+}
+
+.site-navigation {
+  display: flex;
+  height: 60px;
+  padding: 0;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 5px solid #293449;
+}
+
+/** сетки мэйн**/
+
+.categories {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 60px;
+  margin-bottom: 50px;
+}
+
+.categories-list-left {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.categories-list-right {
+  display: flex;
+  flex-direction: column;
+}
+
+.categories-materials {
+  margin-right: 20px;
+}
+
+.categories-list-left,
+.categories-list-right {
+  margin: 0;
+  padding: 0;
+}
+
+.catigories-item {
+  width: 300px;
+  height: 123px;
+  margin-bottom: 20px;
+  padding-left: 20px;
+}
+
+.catigories-item:last-child {
+  margin-bottom: 0;
+}
+
+.slider-title {
+  position: absolute;
+  top: 548px;
+  z-index: 1;
+  margin: 0;
+  padding-left: 24px;
+}
+
+.slider-slogan  {
+  position: absolute;
+  top: 587px;
+  z-index: 1;
+  margin: 0;
+  padding-left: 24px;
+}
+
+
+.slider-button {
+  position: absolute;
+  top: 728px;
+  z-index: 1;
+  margin: 0;
+  padding-left: 24px;
+}
+
+.slider-buttons-previous,
+.slider-buttons-next {
+  position: absolute;
+  top: 638px;
+  z-index: 1;
+  margin: 0;
+  padding-left: 24px;
+}
+
+.popular-container {
+  display: flex;
+  height: 89px;
+  margin-bottom: 20px;
+}
+
+.popular-container h2 {
+  margin: 0;
+}
+
+.popular-items-list {
+  display: flex;
+  justify-content: space-between;
+  padding: 0; 
+  margin: 0;
+}
+
+.catalog-item {
+  min-height: 316px; 
+  width: 218px;
+  margin-bottom: 20px;
+  margin-right: 20px;
+}
+
+.catalog-item:last-child {
+  margin-right: 0;
+}
+
+.popular-factories-list {
+  display: flex; 
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0; 
+}
+
+.popular-factories-list li {
+  width: 220px;
+  height: 145px;
+}
+
+.service {
+  height: 521px;
+  padding-top: 68px;
+  margin-bottom: 82px; 
+}
+
+.service h2 {
+  margin: 0;
+}
+
+.service p {
+  margin-bottom: 65px;
+}
+
+.features-container {
+  display: flex; 
+}
+
+.about-contacts {
+  display: flex;
+  height: 537px; 
+}
+
+.about {
+  width: 640px;
+}
+
+/** сетки футер **/
+
+.main-footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 300px;
+}
+
+.footer-upper,
+.footer-middle {
+  display: flex; 
+}
+
+.footer-menu,
+.footer-categories {
+  display: flex;
+}
+
+.footer-lower .container {
+  display: flex;
+  flex-direction: row;
+  height: 106px;
+}
+
+/** сетки каталог**/
+
+.breadcrumbs  {
+  display: flex;
+  margin-top: 22px;
+  margin-bottom: 24px;
+}
+
+.breadcrumbs li {
+  margin-right: 16px;
+}
+
+.page-title {
+  height: 89px;
+  padding-top: 28px;
+  padding-left: 19px;
+  margin-bottom: 20px; 
+}
+
+.catalog-columns {
+  display: flex;
+  margin-bottom: 60px;  
+}
+
+.filters {
+  margin-right: 20px;
+  width: 220px;
+}
+
+.filters h3,
+.filter-sort {
+  height: 38px;
+}
+
+.filter-form fieldset,
+.filter-factories-list,
+.filter-battery-list {
+  padding: 0;
+  margin: 0;
+}
+
+.catalog {
+  width: 700px;
+}
+
+.filter-sort {
+  display: flex;
+  padding: 0;
+}
+
+.items-list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+}
+
+.catalog-item:nth-child(3n) {
+  margin-right: 0;
+}
+
+.pagination-list {
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
+.description {
+  padding-bottom: 73px;
+}
+
+.description h3 {
+  padding-top: 68px;
+  margin: 0;
+}
+
+.description p {
+  margin: 0;
 }
