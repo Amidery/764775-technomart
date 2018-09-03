@@ -36,13 +36,16 @@
             <span class="address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</span>
           </p>
           <ul class="user-navigation">
-            <li><a class="login" href="#">Войти</a></li>
+            <li>
+              <a class="login" href="#">Войти</a>
+              <svg class="login-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="17" viewBox="0 0 20 17"><path fill="#c5c5c5" d="M14.875 8.5L6 0v6H0v5h6v6z"/><path fill="#c5c5c5" d="M16.986 15.01h-5.027V17h5.027c2.178 0 3.004-1.81 3.029-3.026V3.028C19.99 1.811 19.164 0 16.986 0h-5.027v1.99h5.027c.839 0 .992.681 1.01 1.057v10.904c-.017.376-.171 1.059-1.01 1.059z"/></svg>
+            </li>
             <li><a class="registration" href="#">Регистрация</a></li>
           </ul>
         </div>
         <nav class="main-navigation">
           <ul class="site-navigation">
-            <li class="main-page">Главная</li>
+            <li class="current-page">Главная</li>
             <li><a href="#">Компания</a></li>
             <li><a href="catalog.html">Каталог</a></li>
             <li><a href="#">Новости</a></li>
@@ -58,8 +61,7 @@
         <section class="categories">
           <h2 class="visually-hidden">Категории</h2>
           <ul class="categories-list-left">
-            <li class="catigories-item categories-materials">
-              <div class="flag flag-new">новинка</div>
+            <li class="catigories-item categories-materials new">
               <h3>Материалы</h3>
               <a class="categories-button" href="#">На любой вкус</a>
             </li>
@@ -69,9 +71,11 @@
             </li>
             <li>
               <section class="slider">
+                <input class="visually-hidden" type="radio" id="slide-previous" name="toggle">
+                <input class="visually-hidden" type="radio" id="slide-next" name="toggle" checked>
                 <div class="slider-controls">
-                  <label class="slider-buttons-previous" for="slide-previous"><span class="visually-hidden">Предыдущий слайд</span></label>
-                  <label class="slider-buttons-next" for="slide-next"><span class="visually-hidden">Следующий слайд</span></label>
+                  <label for="slide-previous">Предыдущий</label>
+                  <label for="slide-next">Следующий</label>
                 </div>
                 <div class="slider-content" id="slide1">
                   <h3 class="slider-title">Дрели</h3>
@@ -85,6 +89,10 @@
                   <img src="img/slider_2.jpg" width="620" height="266" alt="#">
                   <a class="button slider-button" href="catalog.html">Открыть каталог</a>
                 </div>
+                <div class="slider-buttons">
+                 <button class="slider-buttons-previous" type="button"><span class="visually-hidden">Предыдущий слайд</span></button>
+                 <button class="slider-buttons-next" type="button"><span class="visually-hidden">Следующий слайд</span></button>
+               </div>
               </section>
             </li>
           </ul>
@@ -97,7 +105,7 @@
               <h3>Скидки 50%</h3>
               <a class="categories-button" href="#">На 350 товаров</a>
             </li>
-            <li class="catigories-item  categories-delivery">
+            <li class="catigories-item categories-delivery">
               <h3>Доставка</h3>
               <a class="categories-button" href="#">Бесплатно</a>
             </li>
@@ -115,7 +123,7 @@
                   <a href="#" class="bookmark">В закладки</a>
               </div>
               <div class="image">
-                <img src="img/snippet-bosch9000.jpg" width="184" height="164" alt="Перфоратор BOSCH BFG 9000">
+                <img src="img/snippet-bosch9000.jpg" width="218" height="168" alt="Перфоратор BOSCH BFG 9000">
               </div>
               <h3>
                 <span>Перфоратор BOSCH</span>
@@ -132,7 +140,7 @@
                   <a href="#" class="bookmark">В закладки</a>
               </div>
               <div class="image">
-                <img src="img/snippet-bosch3000.jpg" width="127" height="112" alt="Перфоратор BOSCH BFG 3000">
+                <img src="img/snippet-bosch3000.jpg" width="218" height="168" alt="Перфоратор BOSCH BFG 3000">
               </div>
               <h3>
                 <span>Перфоратор BOSCH</span>
@@ -143,13 +151,13 @@
                 <span class="new-price">15500 Р.</span>
               </p>
             </li>
-            <li class="catalog-item" tabindex="0">
+            <li class="catalog-item index-item" tabindex="0">
               <div class="actions">
                   <a href="#" class="buy">Купить</a>
                   <a href="#" class="bookmark">В закладки</a>
               </div>
               <div class="image">
-                <img src="img/snippet-bosch6000.jpg" width="144" height="128" alt="Перфоратор BOSCH BFG 6000">
+                <img src="img/snippet-bosch6000.jpg" width="218" height="168" alt="Перфоратор BOSCH BFG 6000">
               </div>
               <h3>
                 <span>Перфоратор BOSCH</span>
@@ -161,13 +169,12 @@
               </p>
             </li>
             <li class="catalog-item new" tabindex="0">
-              <div class="flag flag-new">новинка</div>
               <div class="actions">
                   <a href="#" class="buy">Купить</a>
                   <a href="#" class="bookmark">В закладки</a>
               </div>
               <div class="image">
-                <img src="img/snippet-bosch2000.jpg" width="127" height="112" alt="Перфоратор BOSCH BFG 2000">
+                <img src="img/snippet-bosch2000.jpg" width="218" height="168" alt="Перфоратор BOSCH BFG 2000">
               </div>
               <h3>
                 <span>Перфоратор BOSCH</span>
@@ -203,7 +210,7 @@
           <p>Хороший интернет-магазин отличается от плохого не только ценами! Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
           <div class="features-container">
             <ul class="features">
-              <li>Доставка</li>
+              <li class="features-current">Доставка</li>
               <li>Гарантия</li>
               <li>Кредит</li>
             </ul>
@@ -248,9 +255,9 @@
             <span>Техномарт работает со многими транспортными компаниями:</span>
           </p>
           <ul class="transport-companies">
-            </span><li>Деловые линии</li>
-            </span><li>Автотрейдинг</li>
-            </span><li>ЖелДорЭкспедиция</li>
+            <li class="transport-item">Деловые линии</li>
+            <li class="transport-item">Автотрейдинг</li>
+            <li class="transport-item">ЖелДорЭкспедиция</li>
           </ul>
           <a class="button" href="#">Подробнее о компании</a>
         </section>
@@ -293,13 +300,13 @@
       <div class="footer-lower">
         <div class="container">
           <p class="footer-copyright">
-            <span>&#169; 2010-2017 Компания &#171;Техномарт&#187;</span>
+            <span>&#169; 2010&ndash;2017 Компания &#171;Техномарт&#187;</span>
             <span>Все права защищены</span>
           </p>
           <ul class="socials">
-            <li><a class="social-button" href="#"><span class="visually-hidden">Вконтакте</span></a></li>
-            <li><a class="social-button" href="#"><span class="visually-hidden">Фейсбук</span></a></li>
-            <li><a class="social-button" href="#"><span class="visually-hidden">Инстаграм</span></a></li>
+            <li><a class="social-button social-vk" href="#"><span class="visually-hidden">Вконтакте</span></a></li>
+            <li><a class="social-button social-fb" href="#"><span class="visually-hidden">Фейсбук</span></a></li>
+            <li><a class="social-button social-insta" href="#"><span class="visually-hidden">Инстаграм</span></a></li>
           </ul>
           <p class="footer-mail">
             <b>Обратная связь:</b>
