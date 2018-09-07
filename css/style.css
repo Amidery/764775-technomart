@@ -1244,7 +1244,6 @@ img {
   position: relative;
 }
 
-
 .features-container::before {
   content:"";
   position: absolute;
