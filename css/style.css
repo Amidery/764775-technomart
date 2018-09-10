@@ -579,7 +579,7 @@ img {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin-top: 59px;
-  margin-bottom: 49px;
+  margin-bottom: 53px;
 }
 
 .categories-list-left,
@@ -613,9 +613,10 @@ img {
 .catigories-item {
   position: relative;
   width: 300px;
-  height: 123px;
+  min-height: 123px;
   margin-bottom: 20px;
   padding-top: 20px;
+  padding-right: 97px;
   padding-left: 21px;
 }
 
@@ -714,6 +715,8 @@ img {
 
 .slider-content {
   display: none;
+  width: 620px;
+  height: 266px;
 }
 
 .categories .slider-title {
@@ -820,27 +823,28 @@ img {
   width: 10px;
   height: 10px;
   margin-right: 10px;
+  vertical-align: top;
   border: 2px solid #ffffff;
   border-radius: 50%;
   background-color: #ffffff;
   cursor: pointer;
 }
 
-#slide-previous:checked ~ #slide2,
-#slide-next:checked ~ #slide1 {
+.slide-previous:checked ~ .slide-second,
+.slide-next:checked ~ .slide-first {
   display: block;
 }
 
-#slide-previous:checked ~ .slider-controls label[for="slide-previous"],
-#slide-next:checked ~ .slider-controls label[for="slide-next"] {
+.slide-previous:checked ~ .slider-controls label[for="slide-previous"],
+.slide-next:checked ~ .slider-controls label[for="slide-next"] {
   background-color: #ee3643;
 }
 
-#slide-previous:checked ~ .slider-content {
+.slide-previous:checked ~ .slider-content {
   background-image: url("../img/slider_2.jpg");
 }
 
-#slide-next:checked ~ .slider-content {
+.slide-next:checked ~ .slider-content {
   background-image: url("../img/slider_1.jpg");
 }
 
@@ -1138,7 +1142,7 @@ img {
   text-transform: uppercase;
 }
 
-.service p {
+.service-text {
   width: 400px;
   margin: 0;
   margin-bottom: 67px;
@@ -1188,7 +1192,7 @@ img {
   
 .features-description li {
   width: 700px;
-  height: 280px;
+  min-height: 280px;
   padding-left: 80px;
 }
 
@@ -1206,6 +1210,7 @@ img {
 .features-description p {
   width: 277px;
   margin-top: 32px;
+  margin-bottom: 0px;
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
   line-height: 24px;
@@ -1599,6 +1604,7 @@ img {
 .price-controls span {
   display: inline-block;
   padding-top: 10px;
+  vertical-align: top;
 }
 
 .filter-form .filter-price {
@@ -2180,6 +2186,41 @@ img {
 }
 
 /** всплывающие окна**/
+@keyframes bounce {
+  0% {
+    transform: translate(384px, 750px) scale(0);
+  }
+
+  50% {
+    transform: translate(480px, 630px) scale(0.5);
+  }
+
+  100% {
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
+}
 
 .modal-write-us,
 .modal-map,
@@ -2270,7 +2311,6 @@ img {
   padding-bottom: 9px;
   border: 2px solid #dee3e4;
 }
-
 
 .write-us-form textarea {
   width: 460px;
@@ -2391,4 +2431,13 @@ img {
 .modal-map,
 .cart {
   display: none;
+}
+
+.modal-show {
+  display: block;
+  animation: bounce 0.6s;
+}
+
+.modal-error {
+  animation: shake 0.6s;
 }
