@@ -58,4 +58,118 @@ window.addEventListener("keydown", function (evt) {
     }
 });
 
+/** слайдер верхний**/
+  var slides = document.querySelectorAll(".slider-radio");
+  var counter = 0;
 
+  var changeToNextSlide = function() {
+      for (counter; counter <= slides.length; counter++) {
+          if (slides[counter].hasAttribute("checked")) {
+              if (counter == slides.length - 1) {
+                  slides[counter].removeAttribute("checked");
+                  //slides[counter].checked = false;
+                  counter = 0;
+                  slides[counter].setAttribute("checked", "checked");
+                  //slides[counter].checked = true;
+                  break;
+              } else {
+                  slides[counter].removeAttribute("checked");
+                  //slides[counter].checked = false;
+                  slides[counter+1].setAttribute("checked", "checked");
+				          //slides[counter+1].checked = true;
+                  break;
+              }
+          }
+      }
+      counter = 0;
+  };
+
+  var changeToPrevSlide = function() {
+    for (counter; counter <= slides.length; counter++) { 
+          if (slides[counter].hasAttribute("checked")) { 
+              if (counter == 0) {
+                  slides[counter].removeAttribute("checked");
+                  //slides[counter].checked = false;
+                  counter = slides.length - 1;
+                  slides[counter].setAttribute("checked", "checked");
+                  //slides[counter].checked = true;
+                  break;
+              } else {
+                  slides[counter].removeAttribute("checked");
+                  //slides[counter].checked = false;
+                  slides[counter-1].setAttribute("checked", "checked");
+                  //slides[counter-1].checked = true;
+                  break;
+              }
+          }
+      }
+      counter = 0;
+  }
+
+  document.querySelector(".slider-buttons-next").addEventListener("click", function (evt) {
+    evt.preventDefault();
+    changeToNextSlide();
+});
+
+  document.querySelector(".slider-buttons-previous").addEventListener("click", function (evt) {
+    evt.preventDefault();
+    changeToPrevSlide();
+});
+
+/** слайдер нижний**/
+/**  var slides = document.querySelectorAll(".slider-radio");
+  var counter = 0;
+
+  var changeToNextSlide = function() {
+      for (counter; counter <= slides.length; counter++) {
+          if (slides[counter].hasAttribute("checked")) {
+              if (counter == slides.length - 1) {
+                  slides[counter].removeAttribute("checked");
+                  //slides[counter].checked = false;
+                  counter = 0;
+                  slides[counter].setAttribute("checked", "checked");
+                  //slides[counter].checked = true;
+                  break;
+              } else {
+                  slides[counter].removeAttribute("checked");
+                  //slides[counter].checked = false;
+                  slides[counter+1].setAttribute("checked", "checked");
+                  //slides[counter+1].checked = true;
+                  break;
+              }
+          }
+      }
+      counter = 0;
+  };
+
+  var changeToPrevSlide = function() {
+    for (counter; counter <= slides.length; counter--) { 
+          if (slides[counter].hasAttribute("checked")) { 
+              if (counter == slides.length[0]) {
+                  slides[counter].removeAttribute("checked");
+                  //slides[counter].checked = false;
+                  counter = slides.length - 1;
+                  slides[counter].setAttribute("checked", "checked");
+                  //slides[counter].checked = true;
+                  break;
+              } else {
+                  slides[counter].removeAttribute("checked");
+                  //slides[counter].checked = false;
+                  slides[counter-1].setAttribute("checked", "checked");
+                  //slides[counter-1].checked = true;
+                  break;
+              }
+          }
+      }
+      counter = 0;
+  }
+
+  document.querySelector(".slider-buttons-next").addEventListener("click", function (evt) {
+    evt.preventDefault();
+    changeToNextSlide();
+});
+
+  document.querySelector(".slider-buttons-previous").addEventListener("click", function (evt) {
+    evt.preventDefault();
+    changeToPrevSlide();
+}); **/
