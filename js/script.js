@@ -67,18 +67,20 @@ window.addEventListener("keydown", function (evt) {
           if (slides[counter].hasAttribute("checked")) {
               if (counter == slides.length - 1) {
                   slides[counter].removeAttribute("checked");
-                  //slides[counter].checked = false;
+                  slides[counter].checked = false;
                   counter = 0;
                   slides[counter].setAttribute("checked", "checked");
-                  //slides[counter].checked = true;
+                  slides[counter].checked = true;
                   break;
               } else {
                   slides[counter].removeAttribute("checked");
-                  //slides[counter].checked = false;
+                  slides[counter].checked = false;
                   slides[counter+1].setAttribute("checked", "checked");
-				          //slides[counter+1].checked = true;
+				          slides[counter+1].checked = true;
                   break;
               }
+          } else {
+            // 
           }
       }
       counter = 0;
@@ -89,16 +91,16 @@ window.addEventListener("keydown", function (evt) {
           if (slides[counter].hasAttribute("checked")) { 
               if (counter == 0) {
                   slides[counter].removeAttribute("checked");
-                  //slides[counter].checked = false;
+                  slides[counter].checked = false;
                   counter = slides.length - 1;
                   slides[counter].setAttribute("checked", "checked");
-                  //slides[counter].checked = true;
+                  slides[counter].checked = true;
                   break;
               } else {
                   slides[counter].removeAttribute("checked");
-                  //slides[counter].checked = false;
+                  slides[counter].checked = false;
                   slides[counter-1].setAttribute("checked", "checked");
-                  //slides[counter-1].checked = true;
+                  slides[counter-1].checked = true;
                   break;
               }
           }
@@ -116,60 +118,61 @@ window.addEventListener("keydown", function (evt) {
     changeToPrevSlide();
 });
 
-/** слайдер нижний**/
-/**  var slides = document.querySelectorAll(".slider-radio");
-  var counter = 0;
+/** слайдер нижний **/
+  var serviceSlides = document.querySelectorAll(".features li");
+  var serviceDescription = document.querySelectorAll(".features-description li");
+  var tab = [], index;
+        
+    for(var i = 0; i < serviceSlides.length; i++){
+       tab.push(serviceSlides[i].innerHTML);
+     }
+    
+    for(var i = 0; i < serviceSlides.length; i++)
+    {
+        serviceSlides[i].onclick = function(){
+           
+          index = tab.indexOf(this.innerHTML);
 
-  var changeToNextSlide = function() {
-      for (counter; counter <= slides.length; counter++) {
-          if (slides[counter].hasAttribute("checked")) {
-              if (counter == slides.length - 1) {
-                  slides[counter].removeAttribute("checked");
-                  //slides[counter].checked = false;
-                  counter = 0;
-                  slides[counter].setAttribute("checked", "checked");
-                  //slides[counter].checked = true;
-                  break;
+          for(var j = 0; j < serviceSlides.length; j++)
+          {
+            if (index == j) {
+              serviceSlides[j].classList.add("features-current");
+            } else {
+              serviceSlides[j].classList.remove("features-current");
+            }
+          }       
+
+          for(var j = 0; j < serviceDescription.length; j++)
+          {
+              if (index == j) {
+                serviceDescription[j].classList.add("visible");                
               } else {
-                  slides[counter].removeAttribute("checked");
-                  //slides[counter].checked = false;
-                  slides[counter+1].setAttribute("checked", "checked");
-                  //slides[counter+1].checked = true;
-                  break;
+                serviceDescription[j].classList.remove("visible");
               }
-          }
-      }
-      counter = 0;
-  };
+          };
+        };
+    }
 
-  var changeToPrevSlide = function() {
-    for (counter; counter <= slides.length; counter--) { 
-          if (slides[counter].hasAttribute("checked")) { 
-              if (counter == slides.length[0]) {
-                  slides[counter].removeAttribute("checked");
-                  //slides[counter].checked = false;
-                  counter = slides.length - 1;
-                  slides[counter].setAttribute("checked", "checked");
-                  //slides[counter].checked = true;
-                  break;
-              } else {
-                  slides[counter].removeAttribute("checked");
-                  //slides[counter].checked = false;
-                  slides[counter-1].setAttribute("checked", "checked");
-                  //slides[counter-1].checked = true;
-                  break;
-              }
-          }
-      }
-      counter = 0;
-  }
+/** карта **/
+  var mapLink = document.querySelector(".google-map");
+  var mapPopup = document.querySelector(".modal-map");
+  var mapClose = mapPopup.querySelector(".modal-close");
 
-  document.querySelector(".slider-buttons-next").addEventListener("click", function (evt) {
+  mapLink.addEventListener("click", function (evt) {
     evt.preventDefault();
-    changeToNextSlide();
-});
+    mapPopup.classList.add("modal-show");
+  });
 
-  document.querySelector(".slider-buttons-previous").addEventListener("click", function (evt) {
+  mapClose.addEventListener("click", function (evt) {
     evt.preventDefault();
-    changeToPrevSlide();
-}); **/
+    mapPopup.classList.remove("modal-show");
+  });
+
+  window.addEventListener("keydown", function (evt) {
+    evt.preventDefault();
+    if (evt.keyCode === 27) {
+      if (mapPopup.classList.contains("modal-show")) {
+        mapPopup.classList.remove("modal-show");
+      }
+    }
+  });

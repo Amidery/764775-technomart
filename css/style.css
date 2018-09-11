@@ -566,6 +566,7 @@ img {
   padding: 0 10px;
 }
 
+.features-delivery,
 .features-guaranty,
 .features-credit {
   display: none;
@@ -1180,6 +1181,7 @@ img {
 }
 
 .features li:hover {
+  color: #ffffff;
   background-color: #293449;
 }
 
@@ -2188,15 +2190,19 @@ img {
 /** всплывающие окна**/
 @keyframes bounce {
   0% {
-    transform: translate(384px, 750px) scale(0);
+    transform: translateY(-2000px);
   }
 
-  50% {
-    transform: translate(480px, 630px) scale(0.5);
+  70% {
+    transform: translateY(30px);
+  }
+
+  90% {
+    transform: translateY(-10px);
   }
 
   100% {
-    transform: translateY(0) scale(1);
+    transform: translateY(0);
   }
 }
 
@@ -2243,6 +2249,19 @@ img {
   border-top: none;
 }
 
+.modal-map iframe {
+  position: relative;
+  z-index: 2;
+  border: none;
+}
+
+.map-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
 .modal-write-us {
   top: 100px;
   left: 50%;
@@ -2287,6 +2306,7 @@ img {
   right: 9px;
   width: 21px;
   height: 21px;
+  z-index: 3;
   font-size: 0;
   background-color: transparent;
   background-image: url("../img/icon-close.svg");
@@ -2440,4 +2460,8 @@ img {
 
 .modal-error {
   animation: shake 0.6s;
+}
+
+.visible {
+  display: block;
 }
