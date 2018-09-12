@@ -9,10 +9,11 @@ var email = popup.querySelector("[name=email]");
 var letter = popup.querySelector("[name=letter]");
 
 var isStorageSupport = true;
-  var storage = "";
+var storageUsername = storageEmail = "";
   
   try {
-    storage = localStorage.getItem("username");
+    storageUsername = localStorage.getItem("username");
+    storageEmail = localStorage.getItem("email");
   } catch (err) {
     isStorageSupport = false;
   }
@@ -20,13 +21,19 @@ var isStorageSupport = true;
 link.addEventListener("click", function (evt) {
 	evt.preventDefault();
 	popup.classList.add("modal-show");
-console.log(storage);
-	if (storage) {
-      username.value = storage;
-      email.focus();
-    } else {
-      username.focus();
-    }
+  if (storageUsername && storageEmail) {
+    username.value = storageUsername;
+    email.value = storageEmail;
+    letter.focus();
+  } else if (storageUsername) {
+    username.value = storageUsername;
+    email.focus();
+  } else if (storageEmail) {
+    email.value = storageEmail;
+    username.focus();
+  } else {
+    username.focus();
+  }
 });
 
 close.addEventListener("click", function (evt) {
@@ -44,9 +51,25 @@ form.addEventListener("submit", function (evt) {
     } else {
       if (isStorageSupport) {
         localStorage.setItem("username", username.value);
+        localStorage.setItem("email", email.value);
       }
     }
 });
+
+/** карта **/
+  var mapLink = document.querySelector(".google-map");
+  var mapPopup = document.querySelector(".modal-map");
+  var mapClose = mapPopup.querySelector(".modal-close");
+
+  mapLink.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    mapPopup.classList.add("modal-show");
+  });
+
+  mapClose.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    mapPopup.classList.remove("modal-show");
+  });
 
 window.addEventListener("keydown", function (evt) {
     if (evt.keyCode === 27) {
@@ -54,6 +77,10 @@ window.addEventListener("keydown", function (evt) {
       if (popup.classList.contains("modal-show")) {
         popup.classList.remove("modal-show");
         popup.classList.remove("modal-error");
+      }
+
+      if (mapPopup.classList.contains("modal-show")) {
+        mapPopup.classList.remove("modal-show");
       }
     }
 });
@@ -152,27 +179,3 @@ window.addEventListener("keydown", function (evt) {
           };
         };
     }
-
-/** карта **/
-  var mapLink = document.querySelector(".google-map");
-  var mapPopup = document.querySelector(".modal-map");
-  var mapClose = mapPopup.querySelector(".modal-close");
-
-  mapLink.addEventListener("click", function (evt) {
-    evt.preventDefault();
-    mapPopup.classList.add("modal-show");
-  });
-
-  mapClose.addEventListener("click", function (evt) {
-    evt.preventDefault();
-    mapPopup.classList.remove("modal-show");
-  });
-
-  window.addEventListener("keydown", function (evt) {
-    evt.preventDefault();
-    if (evt.keyCode === 27) {
-      if (mapPopup.classList.contains("modal-show")) {
-        mapPopup.classList.remove("modal-show");
-      }
-    }
-  });
