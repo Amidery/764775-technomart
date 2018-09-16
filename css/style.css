@@ -1918,7 +1918,7 @@ img {
 .pagination-item-current {
   color: #ffffff;
   background-color: #ee3643;
-  border: none;
+  border: 1px solid #ee3643;
 }
 
 .description {
